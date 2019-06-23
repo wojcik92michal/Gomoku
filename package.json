@@ -1,0 +1,51 @@
+{
+    "name": "react-gomoku",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "@types/jest": "24.0.13",
+        "@types/node": "12.0.1",
+        "@types/react": "16.8.17",
+        "@types/react-dom": "16.8.4",
+        "@types/react-redux": "^7.0.9",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "react-redux": "^7.0.3",
+        "react-scripts": "3.0.1",
+        "redux": "^4.0.1",
+        "redux-thunk": "^2.3.0",
+        "typescript": "3.4.5"
+    },
+    "devDependencies": {
+        "@types/enzyme": "^3.9.2",
+        "@types/enzyme-adapter-react-16": "^1.0.5",
+        "enzyme": "^3.9.0",
+        "enzyme-adapter-react-16": "^1.13.1",
+        "prettier": "^1.17.1",
+        "react-test-renderer": "^16.8.6"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject",
+        "prettier:base": "prettier --config ./.prettierrc",
+        "prettier:check": "npm run prettier:base -- --list-different \"src/**/*.{ts,tsx}\"",
+        "prettier:write": "npm run prettier:base -- --write \"src/**/*.{ts,tsx}\""
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    }
+}

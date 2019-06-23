@@ -1,0 +1,15 @@
+.Tile {
+	border: 1px solid black;
+	height: 25px;
+	width: 25px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+
+.Tile:hover {
+	cursor: pointer;
+}
+
+.Tile:last-of-type {
+	border-right: 1px solid black;
+}

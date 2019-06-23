@@ -1,0 +1,4 @@
+-   handle todos
+-   add linter
+-   add missing tests
+-   add some styling
