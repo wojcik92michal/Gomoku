@@ -1,31 +1,31 @@
-import {
-    NEXT_MOVE,
-    GAME_WON,
-    RESET_GAME,
-    UPDATE_STATE_FROM_HISTORY_ITEM
-} from './game.actions';
-import { IHistoryItem } from '../History/History.definition';
+import { Dispatch } from 'react';
+import { IAppState } from '../../App.store';
 import { ITilePosition } from '../Board/Tile/Tile.definition';
-import { TileValue, IGameSettings } from '../Gomoku.definitions';
-import { IGameState } from './game.reducer';
+import { TileValue } from '../Gomoku.definitions';
+import { GameSettings } from '../Gomoku.settings';
+import { IHistoryItem } from '../History/History.definition';
+import {
+    addHistoryItem,
+    unactivateHistoryItems
+} from '../History/redux/history.creators';
 import { IHistoryState } from '../History/redux/history.reducer';
 import {
-    mapPlayerToTileValue,
+    getNextPlayer,
     getTilesWithMoveMarked,
-    getNextPlayer
+    mapPlayerToTileValue
 } from '../utils/Gomoku.utils';
 import {
-    isUserMoveChoiceValid,
     canMoveBeMakeWithActiveHistory,
+    isUserMoveChoiceValid,
     isWinningMove
 } from '../utils/GomokuValidation.utils';
 import {
-    unactivateHistoryItems,
-    addHistoryItem
-} from '../History/redux/history.creators';
-import { IAppState } from '../../App.store';
-import { Dispatch } from 'react';
-import { GameSettings } from '../Gomoku.settings';
+    GAME_WON,
+    NEXT_MOVE,
+    RESET_GAME,
+    UPDATE_STATE_FROM_HISTORY_ITEM
+} from './game.actions';
+import { IGameState } from './game.reducer';
 
 // TODO types
 function nextMove(tiles: number[][]) {
