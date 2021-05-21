@@ -1,12 +1,11 @@
-import { Player } from '../../Gomoku.definitions';
+import { AnyAction } from 'redux';
 import { IHistoryItem } from '../History.definition';
 import {
-    UNACTIVATE_HISTORY_ITEMS,
     ADD_HISTORY_ITEM,
+    CLEAR_HISTORY_ITEMS,
     MARK_HISTORY_ITEM_AS_ACTIVE,
-    CLEAR_HISTORY_ITEMS
+    UNACTIVATE_HISTORY_ITEMS
 } from './history.actions';
-import { AnyAction } from 'redux';
 
 export interface IHistoryState {
     historyItems: IHistoryItem[];
