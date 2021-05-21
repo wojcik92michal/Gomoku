@@ -10,7 +10,7 @@ const App: React.FC = () => {
         <ErrorHandler>
             <div className={styles.appContainer}>
                 <header>
-                    <h2>Gomoku</h2>
+                    <h2>Gomoku test</h2>
                 </header>
                 <Game />
                 <footer>
